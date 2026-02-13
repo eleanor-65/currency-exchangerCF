@@ -21,13 +21,15 @@ public class CurrencyConverter {
                 System.out.print("How many pounds would you like to convert? ");
                 double pounds = scan.nextDouble();
                 double dollars   = pounds * dollarOverPoundRatio;
-                System.out.println("£" + pounds + " will give you $" + dollars);
+				String dollars2Dp = String.format("%.2f", dollars);
+                System.out.println("£" + pounds + " will give you $" + dollars2Dp);
                 break;
             case 2:
                 System.out.print("How many dollars would you like to convert? ");
                 dollars   = scan.nextDouble();
                 pounds = dollars * poundOverDollarRatio;
-                System.out.println("$"+ dollars + " will give you £" + pounds);
+				String pounds2Dp = String.format("%.2f", pounds);
+                System.out.println("$"+ dollars + " will give you £" + pounds2Dp);
                 break;
             case 0:
                 finished = true;
